@@ -133,6 +133,11 @@ Instalar la extension de visual studio code **Error Lens** para que se muestren 
 
 
 
+## NOTA: 
+Los archivos y sus codigos nesesarios para correr la app, estan entre los archivos para que funcionen de referencia
+
+
+
 
 
 
