@@ -1,0 +1,23 @@
+# Ignorar archivos o carpetas que no se deben incluir en la imagen
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Ignorar archivos específicos dentro de las carpetas
+backend/node_modules
+backend/npm-debug.log
+backend/yarn-error.log
+
+# Ignorar archivos específicos en el directorio raíz
+.env
+.DS_Store
+
+# Ignorar cualquier archivo o carpeta dentro de la carpeta "client" que no se necesita
+client/node_modules
+client/npm-debug.log
+client/yarn-error.log
+
+# Ignorar cualquier archivo o carpeta dentro de la carpeta "server" que no se necesita
+server/node_modules
+server/npm-debug.log
+server/yarn-error.log
