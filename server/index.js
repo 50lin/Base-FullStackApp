@@ -1,27 +1,29 @@
 // backend/index.js
-import express from 'express'
-import router from './routes/user.js'
-import cors from 'cors'
-import dotenv from 'dotenv'
+// REalizamos las importaciones de las dependencias
 
-dotenv.config()
+import express from 'express' // Importamos express para usar sus métodos y propiedades
+import router from './routes/user.js' // Importamos el router que define las rutas y sus acciones
+import cors from 'cors' // Importamos cors para poder interactuar con el backend que esta en otro servidor
+import dotenv from 'dotenv' // Importamos dotenv para leer las variables de entorno
 
-const port = process.env.PORT || 5001
+dotenv.config() // Leemos las variables de entorno de nuestro archivo .env
 
-const app = express()
+const port = process.env.PORT || 5001 // Definimos el puerto que escuchará el backend
 
-app.use(express.json())
-app.use(cors())
-app.use('/api', router)
+const app = express() // Creamos la aplicación express
 
-// Rutas del backend
+app.use(express.json()) // Habilitamos el uso de JSON en la aplicación
+app.use(cors()) // Habilitamos el uso de CORS en la aplicación
+app.use('/api', router) // Definimos la ruta de la aplicación, aqui se uso "api" antes del nombre de la ruta (opciona)
+
+// Ruta del backend para pruebas de funcionamiento en la direccion raiz
 app.get('/', (req, res) => {
-  res.send('¡Hola desde el backend!')
+  res.send('¡Hola desde el backend!') // Enviamos un mensaje de bienvenida a la aplicación en la ruta raiz
 })
 
+// Iniciamos el servidor en el puerto 5001 e imprimimos un mensaje de consola de bienvenida
 app.listen(port, () => {
-  // console.log('Servidor backend escuchando en el puerto XXXX')
   console.log(`Servidor backend escuchando en el puerto ${port}`)
 })
 
-export default app
+export default app // Exportamos la aplicación

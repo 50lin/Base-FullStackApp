@@ -1,10 +1,11 @@
 # Nombre del Proyecto
-BASE FULL STACK APP  
+BASE FULL STACK APP 1.0  
 
 ## Descripción
 
 - Demo de una app Full Stack MERN basica con instrucciones de uso, pruebas, conexion a bd mongo en atlas y docker.
 - Pasos para hacer esta app desde cero.
+- El codigo estara comentado para facilitar el entendimiento de las funciones y codigos.
 
 ## Tecnologías Utilizadas
 
@@ -134,10 +135,32 @@ Instalar la extension de visual studio code **Error Lens** para que se muestren 
 
 
 ## NOTA: 
-Los archivos y sus codigos nesesarios para correr la app, estan entre los archivos para que funcionen de referencia
+Los archivos y sus codigos nesesarios para correr la app, estan entre los archivos para que funcionen de referencia, se pueden ver los commit anteriores para ver el progreso de los archivos.
 
 
 
 
+# Version 1.1 del proyecto
+OPERACIONES CRUD  
+
+## Descripción
+
+Luego de las primeras intrucciones del desarrollo, explicaremos los pasos para agregar operaciones CRUD al desarrollo inicial, tambien haremos mas pruebas unitarias para ver su funcionamiento.
+
+## Instrucciones
 
 
+1. Modificaremos el "index.js" de la carpeta "server" y moveremos algunos codigos hacia unas carpetas que crearemos para dar orden y mejor estructura a la aplicacion.
+
+   -Creamos una carpeta llamada "routes" donde estaran las rutas de nuestra aplicacion.
+      -Dentro de esta carpeta creamos un archivo llamado "user.js" el cual manejara la ruta de los usuaios. 
+   
+   -Creamos una carpeta llamada "dbConfig.js" donde estara la conexion a la base de datos de la app.
+      -Dentro de esta carpeta creamos un archivo llamado "dbConfig" el cual tendra la configuracion de la base de datos.
+   
+   -Creamos una carpeta llamada "controllores" donde estara la logica de nuestra app en forma de controladores. 
+      Creamos un archivo de nombre "userController.js" donde estaran las funciones CRUD (create, read, update, delete).
+
+2. Crearemos una carpeta para nuestro modelo de base de datos Mongo, esta carpeta se llamara "models" y dentro crearemos un archivo llamado user.js, donde estara la estructura y modelado de nuestra base de datos.      
+
+3. Se agregaron mas pruebas unitarias al archivo index.test.js
